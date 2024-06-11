@@ -7,13 +7,13 @@ with text `hello| world` (`|` is the cursor), it converts following input sequen
 * `<c-o>tw` to `<esc>ltwa`, results `hello |world`
 * `<c-o>fw` to `<esc>lfwa`, results `hello w|orld`
 
-it supports cancellation via `<esc>`, and ends with normal mode rather than insert mode.
+it supports cancellation via `<esc>`, and ends in normal mode rather than insert mode.
 
 for other cases, it falls back to the original `<c-o>`
 
 ## status
 * just works
-* not supposed to be used publicly
+* yet not supposed to be used publicly, due to heavy dependencies
 
 ## prerequisites
 * linux
