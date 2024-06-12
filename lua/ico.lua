@@ -1,16 +1,7 @@
+local ascii = require("infra.ascii")
 local feedkeys = require("infra.feedkeys")
 local jelly = require("infra.jellyfish")("ico", "debug")
 local tty = require("infra.tty")
-
-local ascii = {
-  esc = 0x1b,
-  space = 0x20,
-  tilde = string.byte("~"),
-  tab = 0x09,
-  --
-  t = string.byte("t"),
-  f = string.byte("f"),
-}
 
 local function is_inputable(code)
   if code >= ascii.space and code <= ascii.tilde then return true end
