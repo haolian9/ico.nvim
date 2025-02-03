@@ -1,4 +1,5 @@
 local ascii = require("infra.ascii")
+local mi = require("infra.mi")
 local feedkeys = require("infra.feedkeys")
 local jelly = require("infra.jellyfish")("ico", "debug")
 local tty = require("infra.tty")
@@ -20,7 +21,7 @@ end
 
 ---designed to replace i_ctrl-o
 return function()
-  feedkeys.keys("<esc>l", "n")
+  mi.stopinsert()
 
   vim.schedule(function() --schedule to allow redrawing the cursor
     local char, code = tty.read_raw()
